@@ -1,6 +1,6 @@
 {
     "name": "test-mongo-error",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "index.js",
     "repository": "https://github.com/henullcom/test-mongo-error.git",
     "author": "Your Name <you@example.com>",

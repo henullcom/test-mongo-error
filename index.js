@@ -7,6 +7,11 @@ prisma
         const allCustomers = await prisma.customer.findMany({
             include: {
                 invoices: true,
+                _count: {
+                    select: {
+                        invoices: true,
+                    },
+                },
             },
         });
         console.log(`allCustomers`, allCustomers);
