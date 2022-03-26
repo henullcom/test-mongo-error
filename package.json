@@ -1,0 +1,19 @@
+{
+    "name": "test-mongo-error",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/henullcom/test-mongo-error.git",
+    "author": "Your Name <you@example.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "node index.ts"
+    },
+    "devDependencies": {
+        "prisma": "^3.11.1",
+        "ts-loader": "^9.2.8",
+        "typescript": "^4.6.3"
+    },
+    "dependencies": {
+        "@prisma/client": "^3.11.1"
+    }
+}

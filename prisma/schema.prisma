@@ -1,0 +1,21 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongoDb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("PAYMENT_DATABASE_URL")
+}
+
+model Invoice {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  email      String?
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id])
+}
+
+model Customer {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  invoices Invoice[]
+}
